@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saludo-deployment-v2
+  labels:
+    app: saludo-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saludo-service
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: saludo-service
+        version: v2
+    spec:
+      containers:
+        - name: saludo-service
+          image: imagen-docker
+          ports:
+            - containerPort: 8080
+          env:
+            - name: VERSION
+              value: "V2"
