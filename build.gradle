@@ -27,7 +27,7 @@ sonarqube {
 
 dependencies {
 
-
+    //commits de prueba de gitflow
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -35,7 +35,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    
+
 }
 
 test {
